@@ -1,16 +1,19 @@
-import React from 'react';
+import React from "react";
 import {
   Route,
   Switch,
   Redirect,
   BrowserRouter as Router,
 } from "react-router-dom";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 
-import { LoginScreen } from './screens/login';
-import { DashboardScreen } from './screens/dashboard';
+import { LoginScreen } from "./screens/login";
+import { DashboardScreen } from "./screens/dashboard";
 
-import './index.css';
+import "./index.css";
+import { validateEnv } from "./config";
+
+validateEnv();
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,5 +25,5 @@ ReactDOM.render(
       </Switch>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
